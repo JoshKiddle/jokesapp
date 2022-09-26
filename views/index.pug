@@ -1,0 +1,11 @@
+extends layout
+
+block layout-content
+  div(class="View WelcomeView", id="view", onmousedown="nextJoke()", )
+    h1.Banner Jokes App
+    div.Message
+      div.Title
+        h1 #{joke.setup}
+        button(class="jokeBtn", id="button", onmouseup="showJoke()") Click for the punchline!
+        span(class="pdf", id="punchline") #{joke.punchline}
+    div.NavButtons
